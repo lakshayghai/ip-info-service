@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable, Logger } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
-import { map, Observable, tap } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { IpInfo } from '../../ipinfo/models/ipinfo.model';
 import SlidingWindowRateLimiter from 'sliding-window-rate-limiter';
 import { InjectRedis } from '@liaoliaots/nestjs-redis';

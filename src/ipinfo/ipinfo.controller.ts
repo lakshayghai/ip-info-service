@@ -1,9 +1,14 @@
-import { Controller, Get, HttpException, Param } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { IpInfo } from './models/ipinfo.model';
 import { IpValidationPipe } from './validation/ipvalidation.pipe';
 import { from, Observable } from 'rxjs';
 import { IpInfoService } from './ipinfo.service';
-import { ApiBadRequestResponse, ApiOkResponse, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  ApiBadRequestResponse,
+  ApiOkResponse,
+  ApiResponse,
+  ApiTags,
+} from '@nestjs/swagger';
 
 @ApiTags('Ip Information')
 @ApiBadRequestResponse({ description: 'Invalid ipV4 Address' })
