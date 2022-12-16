@@ -1,6 +1,6 @@
 ## Description
 
-This service will give you IP Address information for the given IP.
+This service will give you IP V4 Address information for the given IP.
 It gets data from currently 2 vendors
 - Ip Stack
 - Ip Registry
@@ -13,7 +13,9 @@ Ip Addresses are cached for a TTL, which can be set using environment variable.
 
 Rate limiting and Caching uses Redis.
 
-Once you start the server, Swagger documentation is available here `http://localhost:3000/api#/`
+### Once you start the server, Swagger documentation is available here (You can test the API)<br />
+## [Swagger](https://link-url-here.org)
+
 
 ## Two ways to run the App
 
@@ -31,7 +33,7 @@ docker compose up
 docker compose up --build
 ```
 
-## Running the app locally
+### Running the app locally
 
 ```bash
 # Run redis locally for Caching and Rate Limiting
