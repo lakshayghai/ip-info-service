@@ -14,7 +14,7 @@ Ip Addresses are cached for a TTL, which can be set using environment variable.
 Rate limiting and Caching uses Redis.
 
 ### Once you start the server, Swagger documentation is available here (You can test the API)<br />
-## [Swagger](https://link-url-here.org)
+## [Swagger](http://localhost:3000/api)
 
 
 ## Two ways to run the App
