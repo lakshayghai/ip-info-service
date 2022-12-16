@@ -35,6 +35,9 @@ docker compose up --build
 
 ### Running the app locally
 
+- Node Version 18.12.1 (Recommended)
+- Works with Node 17 as well with Warnings
+
 ```bash
 # Run redis locally for Caching and Rate Limiting
 docker run -d -p 6379:6379 --name redis redis:latest
