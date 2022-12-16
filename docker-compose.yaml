@@ -1,0 +1,23 @@
+services:
+  redis:
+    container_name: ip-info-cache
+    image: redis:latest
+    ports:
+      - 6379:6379
+
+  ip-info:
+    container_name: ip-info-api
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - IP_ADDRESS_CACHE_TTL=60
+      - IP_REGISTRY_API_KEY=6v1z4vmitqip2rmi
+      - IP_REGISTRY_RATE_LIMIT_TIME=90000
+      - IP_REGISTRY_REQUEST_LIMIT=2
+      - IP_REGISTRY_URL=https://api.ipregistry.co
+      - IP_STACK_API_KEY=4053143565ada4e5b6f139c99f3df822
+      - IP_STACK_RATE_LIMIT_TIME=90000
+      - IP_STACK_REQUEST_LIMIT=2
+      - IP_STACK_URL=http://api.ipstack.com
+      - REDIS_HOST=redis
